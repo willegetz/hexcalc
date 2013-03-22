@@ -1,4 +1,8 @@
-﻿@section scripts{
+﻿@{
+	ViewBag.Title = "Hexagon Calculator";
+}
+
+@section scripts{
 	<script type="text/javascript" src="~/Scripts/Custom/HexCalcs.js"></script>
 }
 <div class="container-fluid">
@@ -21,7 +25,7 @@
 								<div class="control-group">
 									<div class="control-label">Apothem Length:</div>
 									<div class="controls">
-										<strong><span class="btn" data-bind="visible: !apothemEdit(), text: calcApothem, click: edit.bind($data, 'apothem')" ></span></strong>
+										<strong><span class="btn input-medium" data-bind="visible: !apothemEdit(), text: calcApothem, click: edit.bind($data, 'apothem')" ></span></strong>
 										<input class="input-medium" type="text" data-bind="visible: apothemEdit, value:givenApothem, hasfocus: apothemEdit" />
 									</div>
 								</div>
