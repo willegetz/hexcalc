@@ -1,0 +1,98 @@
+﻿body {
+}
+
+.row {
+	width: 1000px;
+	max-width: 100%;
+	min-width: 768px;
+	margin: 0 auto;
+}
+
+.row .row {
+	width: auto;
+	max-width: none;
+	min-width: 0;
+	margin: 0 -15px;
+}
+
+.column, .columns {
+	float: left;
+	min-height: 1px;
+	padding: 0 15px;
+	position: relative;
+}
+
+[class*="column"]+[class*="column"]:last-child {
+	float: right;
+}
+
+[class*="column"]+[class*="column"].end {
+	float: left;
+}
+
+.row, .one {
+	width: 8.33%;
+}
+
+.row, .two {
+	width: 16.66%;
+}
+
+.row, .three {
+	width: 25%;
+}
+
+.row, .four {
+	width: 33.33%;
+}
+
+.row, .five {
+	width: 41.66%;
+}
+
+.row, .six {
+	width: 50%;
+}
+
+.row, .seven {
+	width: 58.33%;
+}
+
+.row, .eight {
+	width: 66.66%;
+}
+
+.row, .nine {
+	width: 75%;
+}
+
+.row, .ten {
+	width: 83.33%;
+}
+
+.row, .eleven {
+	width: 91.66%;
+}
+
+.row, .twelve {
+	width: 100%;
+}
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.row:before, .row:after, .clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+
+.row:after, .clearfix:after {
+	clear: both;
+}
+
+.row, .clearfix {
+	zoom: 1;
+}
