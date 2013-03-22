@@ -37,3 +37,7 @@ $RECYCLE.BIN/
 *.suo
 MvcApplication1/obj/
 MvcApplication1/bin/
+
+#For NuGet Restore#
+###################
+packages/
