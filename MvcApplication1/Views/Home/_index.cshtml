@@ -21,11 +21,11 @@
 					<div class="span3">
 						<img src="~/Content/images/Apothem.gif" alt="" data-bind="click: edit.bind($data, 'apothem')" />
 						<div class="row-fluid">
-							<div class="offset3">
+							<div class="offset4">
 								<div class="control-group">
 									<div class="control-label">Apothem Length:</div>
 									<div class="controls">
-										<strong><span class="btn input-medium" data-bind="visible: !apothemEdit(), text: calcApothem, click: edit.bind($data, 'apothem')" ></span></strong>
+										<strong><span class="btn input-small" data-bind="visible: !apothemEdit(), text: calcApothem, click: edit.bind($data, 'apothem')" ></span></strong>
 										<input class="input-medium" type="text" data-bind="visible: apothemEdit, value:givenApothem, hasfocus: apothemEdit" />
 									</div>
 								</div>
@@ -35,11 +35,11 @@
 					<div class="span3">
 						<img src="~/Content/images/Perimeter.gif" alt="" data-bind="click: edit.bind($data, 'perimeter')" />
 						<div class="row-fluid">
-							<div class="offset3">
+							<div class="offset4">
 								<div class="control-group">
 									<div class="control-label">Perimeter Length:</div>
 									<div class="controls">
-										<span class="btn input-medium" data-bind="visible: !perimeterEdit(), text: calcPerimeter, click: edit.bind($data, 'perimeter')" ></span>
+										<strong><span class="btn input-small" data-bind="visible: !perimeterEdit(), text: calcPerimeter, click: edit.bind($data, 'perimeter')" ></span></strong>
 										<input class="input-medium" type="text" data-bind="visible: perimeterEdit, value: givenPerimeter, hasfocus: perimeterEdit" />
 									</div>
 								</div>
@@ -49,11 +49,11 @@
 					<div class="span3">
 						<img src="~/Content/images/Area.gif" alt="" data-bind="click: edit.bind($data, 'area')" />
 						<div class="row-fluid">
-							<div class="offset3">
+							<div class="offset4">
 								<div class="control-group">
 									<div class="control-label">Area Size:</div>
 									<div class="controls">
-										<span class="btn input-medium" data-bind="visible: !areaEdit(), text: calcArea, click: edit.bind($data, 'area')"></span>
+										<strong><span class="btn input-small" data-bind="visible: !areaEdit(), text: calcArea, click: edit.bind($data, 'area')"></span></strong>
 										<input class="input-medium" type="text" data-bind="visible: areaEdit, value: givenArea, hasfocus: areaEdit" />
 									</div>
 								</div>
@@ -63,11 +63,11 @@
 					<div class="span3">
 						<img src="~/Content/images/VertexToVertex.gif" alt="" data-bind="click: edit.bind($data, 'VtoV')"/>
 						<div class="row-fluid">
-							<div class="offset3">
+							<div class="offset4">
 								<div class="control-group">
-									<div class="control-label">Vertex to Vertex Length:</div>
+									<div class="control-label">V to V Length:</div>
 									<div class="controls">
-										<span class="btn input-medium" data-bind="visible: !vToVEdit(), text: calcVtoV, click: edit.bind($data, 'VtoV')" ></span>
+										<strong><span class="btn input-small" data-bind="visible: !vToVEdit(), text: calcVtoV, click: edit.bind($data, 'VtoV')" ></span></strong>
 										<input class="input-medium" type="text" data-bind="visible: vToVEdit, value: givenVtoV, hasfocus: vToVEdit"/>
 									</div>
 								</div>
@@ -80,11 +80,11 @@
 				<div class="span3">
 					<img src="~/Content/images/CenterToVertex.gif" alt="" data-bind="click: edit.bind($data, 'CtoV')"/>
 					<div class="row-fluid">
-						<div class="offset3">
+						<div class="offset4">
 							<div class="control-group">
-								<div class="control-label">Center to Vertex Length:</div>
+								<div class="control-label">C to V Length:</div>
 								<div class="controls">
-									<span class="btn input-medium" data-bind="visible: !cToVEdit(), text: calcCtoV, click: edit.bind($data, 'CtoV')" ></span>
+									<strong><span class="btn input-small" data-bind="visible: !cToVEdit(), text: calcCtoV, click: edit.bind($data, 'CtoV')" ></span></strong>
 									<input class="input-medium" type="text" data-bind="visible: cToVEdit, value: givenCtoV, hasfocus: cToVEdit"/>
 								</div>
 							</div>
@@ -94,11 +94,11 @@
 				<div class="span3">
 					<img src="~/Content/images/SideLength.gif" alt="" data-bind="click: edit.bind($data, 'side')" />
 					<div class="row-fluid">
-						<div class="offset3">
+						<div class="offset4">
 							<div class="control-group">
 								<div class="control-label">Side Length:</div>
 								<div class="controls">
-									<span class="btn input-medium" data-bind="visible: !sideEdit(), text: calcSide, click: edit.bind($data, 'side')" ></span>
+									<strong><span class="btn input-small" data-bind="visible: !sideEdit(), text: calcSide, click: edit.bind($data, 'side')" ></span></strong>
 									<input class="input-medium" type="text" data-bind="visible: sideEdit, value: givenSide, hasfocus: sideEdit"/>
 								</div>
 							</div>
@@ -108,11 +108,11 @@
 				<div class="span3">
 					<img src="~/Content/images/SideToSide.gif" alt="" data-bind="click: edit.bind($data, 'FtoF')" />
 					<div class="row-fluid">
-						<div class="offset3">
+						<div class="offset4">
 							<div class="control-group">
-								<div class="control-label">Side to Side Length:</div>
+								<div class="control-label">S to S Length:</div>
 								<div class="controls">
-									<span class="btn input-medium" data-bind="visible: !fToFEdit(), text: calcFtoF, click: edit.bind($data, 'FtoF')" ></span>
+									<strong><span class="btn input-small" data-bind="visible: !fToFEdit(), text: calcFtoF, click: edit.bind($data, 'FtoF')" ></span></strong>
 									<input class="input-medium" type="text" data-bind="visible: fToFEdit, value: givenFtoF, hasfocus: fToFEdit"/>
 								</div>
 							</div>
