@@ -11,116 +11,116 @@
 	</div>
 </div>
 
-<div class="container-fluid" >
-    <div class="row-fluid">
-        <div class="span2" >
-            @Html.Partial("_about")
-        </div>
-        <div class="span8" >
-            <div class="span12">
-                <div class="row-fluid">
-                    <div class="span3">
-                        <img src="~/Content/images/Apothem.gif" alt="Apothem: The line segment from the center of a hexagon to the midpoint of a side." data-bind="click: edit.bind($data, 'apothem')" />
-                        <div class="row-fluid">
-                            <div class="offset4">
-                                <div class="control-group">
-                                    <div class="control-label">Apothem Length:</div>
-                                    <div class="controls">
-                                        <strong><span class="btn input-small" data-bind="visible: !apothemEdit(), text: calcApothem, click: edit.bind($data, 'apothem')" ></span></strong>
-                                        <input class="input-small" type="text" data-bind="visible: apothemEdit, value:givenApothem, hasfocus: apothemEdit" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <img src="~/Content/images/Perimeter.gif" alt="Perimeter: The path that surrounds the hexagon." data-bind="click: edit.bind($data, 'perimeter')" />
-                        <div class="row-fluid">
-                            <div class="offset4">
-                                <div class="control-group">
-                                    <div class="control-label">Perimeter Length:</div>
-                                    <div class="controls">
-                                        <strong><span class="btn input-small" data-bind="visible: !perimeterEdit(), text: calcPerimeter, click: edit.bind($data, 'perimeter')" ></span></strong>
-                                        <input class="input-small" type="text" data-bind="visible: perimeterEdit, value: givenPerimeter, hasfocus: perimeterEdit" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <img src="~/Content/images/Area.gif" alt="Area: The size of the hexagon's surface." data-bind="click: edit.bind($data, 'area')" />
-                        <div class="row-fluid">
-                            <div class="offset4">
-                                <div class="control-group">
-                                    <div class="control-label">Area Size:</div>
-                                    <div class="controls">
-                                        <strong><span class="btn input-small" data-bind="visible: !areaEdit(), text: calcArea, click: edit.bind($data, 'area')"></span></strong>
-                                        <input class="input-small" type="text" data-bind="visible: areaEdit, value: givenArea, hasfocus: areaEdit" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <img src="~/Content/images/VertexToVertex.gif" alt="Vertex to Vertex: The line segment that connects one point of the hexagon with its opposite point." data-bind="click: edit.bind($data, 'VtoV')"/>
-                        <div class="row-fluid">
-                            <div class="offset4">
-                                <div class="control-group">
-                                    <div class="control-label">V to V Length:</div>
-                                    <div class="controls">
-                                        <strong><span class="btn input-small" data-bind="visible: !vToVEdit(), text: calcVtoV, click: edit.bind($data, 'VtoV')" ></span></strong>
-                                        <input class="input-small" type="text" data-bind="visible: vToVEdit, value: givenVtoV, hasfocus: vToVEdit"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row-fluid">
-                <div class="span3">
-                    <img src="~/Content/images/CenterToVertex.gif" alt="Center to Vertex: The line segment from the center of the hexagon to one of the vertices." data-bind="click: edit.bind($data, 'CtoV')"/>
-                    <div class="row-fluid">
-                        <div class="offset4">
-                            <div class="control-group">
-                                <div class="control-label">C to V Length:</div>
-                                <div class="controls">
-                                    <strong><span class="btn input-small" data-bind="visible: !cToVEdit(), text: calcCtoV, click: edit.bind($data, 'CtoV')" ></span></strong>
-                                    <input class="input-small" type="text" data-bind="visible: cToVEdit, value: givenCtoV, hasfocus: cToVEdit"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="span3">
-                    <img src="~/Content/images/SideLength.gif" alt="Side Length: One side of the hexagon." data-bind="click: edit.bind($data, 'side')" />
-                    <div class="row-fluid">
-                        <div class="offset4">
-                            <div class="control-group">
-                                <div class="control-label">Side Length:</div>
-                                <div class="controls">
-                                    <strong><span class="btn input-small" data-bind="visible: !sideEdit(), text: calcSide, click: edit.bind($data, 'side')" ></span></strong>
-                                    <input class="input-small" type="text" data-bind="visible: sideEdit, value: givenSide, hasfocus: sideEdit"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="span3">
-                    <img src="~/Content/images/SideToSide.gif" alt="Side to Side: Can also be called Flat to Flat. The line segment that connects the midpoint of one side of the hexagon to the opposite midpoint." data-bind="click: edit.bind($data, 'FtoF')" />
-                    <div class="row-fluid">
-                        <div class="offset4">
-                            <div class="control-group">
-                                <div class="control-label">S to S Length:</div>
-                                <div class="controls">
-                                    <strong><span class="btn input-small" data-bind="visible: !fToFEdit(), text: calcFtoF, click: edit.bind($data, 'FtoF')" ></span></strong>
-                                    <input class="input-small" type="text" data-bind="visible: fToFEdit, value: givenFtoF, hasfocus: fToFEdit"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2">
+			@Html.Partial("_about")
+		</div>
+		<div class="span8">
+			<div class="span12">
+				<div class="row-fluid">
+					<div class="span3">
+						<img src="~/Content/images/Apothem.gif" alt="Apothem: The line segment from the center of a hexagon to the midpoint of a side." data-bind="click: edit.bind($data, 'apothem')" />
+						<div class="row-fluid">
+							<div class="offset4">
+								<div class="control-group">
+									<div class="control-label">Apothem Length:</div>
+									<div class="controls">
+										<strong><span class="btn input-small" data-bind="visible: !apothemEdit(), text: calcApothem, click: edit.bind($data, 'apothem')"></span></strong>
+										<input class="input-small" type="text" data-bind="visible: apothemEdit, value:givenApothem, hasfocus: apothemEdit" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="span3">
+						<img src="~/Content/images/SideToSide.gif" alt="Side to Side: Can also be called Flat to Flat. The line segment that connects the midpoint of one side of the hexagon to the opposite midpoint." data-bind="click: edit.bind($data, 'FtoF')" />
+						<div class="row-fluid">
+							<div class="offset4">
+								<div class="control-group">
+									<div class="control-label">S to S Length:</div>
+									<div class="controls">
+										<strong><span class="btn input-small" data-bind="visible: !fToFEdit(), text: calcFtoF, click: edit.bind($data, 'FtoF')"></span></strong>
+										<input class="input-small" type="text" data-bind="visible: fToFEdit, value: givenFtoF, hasfocus: fToFEdit" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="span3">
+						<img src="~/Content/images/Perimeter.gif" alt="Perimeter: The path that surrounds the hexagon." data-bind="click: edit.bind($data, 'perimeter')" />
+						<div class="row-fluid">
+							<div class="offset4">
+								<div class="control-group">
+									<div class="control-label">Perimeter Length:</div>
+									<div class="controls">
+										<strong><span class="btn input-small" data-bind="visible: !perimeterEdit(), text: calcPerimeter, click: edit.bind($data, 'perimeter')"></span></strong>
+										<input class="input-small" type="text" data-bind="visible: perimeterEdit, value: givenPerimeter, hasfocus: perimeterEdit" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="span3">
+						<img src="~/Content/images/Area.gif" alt="Area: The size of the hexagon's surface." data-bind="click: edit.bind($data, 'area')" />
+						<div class="row-fluid">
+							<div class="offset4">
+								<div class="control-group">
+									<div class="control-label">Area Size:</div>
+									<div class="controls">
+										<strong><span class="btn input-small" data-bind="visible: !areaEdit(), text: calcArea, click: edit.bind($data, 'area')"></span></strong>
+										<input class="input-small" type="text" data-bind="visible: areaEdit, value: givenArea, hasfocus: areaEdit" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid">
+					<div class="span3">
+						<img src="~/Content/images/SideLength.gif" alt="Side Length: One side of the hexagon." data-bind="click: edit.bind($data, 'side')" />
+						<div class="row-fluid">
+							<div class="offset4">
+								<div class="control-group">
+									<div class="control-label">Side Length:</div>
+									<div class="controls">
+										<strong><span class="btn input-small" data-bind="visible: !sideEdit(), text: calcSide, click: edit.bind($data, 'side')"></span></strong>
+										<input class="input-small" type="text" data-bind="visible: sideEdit, value: givenSide, hasfocus: sideEdit" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="span3">
+						<img src="~/Content/images/CenterToVertex.gif" alt="Center to Vertex: The line segment from the center of the hexagon to one of the vertices." data-bind="click: edit.bind($data, 'CtoV')" />
+						<div class="row-fluid">
+							<div class="offset4">
+								<div class="control-group">
+									<div class="control-label">C to V Length:</div>
+									<div class="controls">
+										<strong><span class="btn input-small" data-bind="visible: !cToVEdit(), text: calcCtoV, click: edit.bind($data, 'CtoV')"></span></strong>
+										<input class="input-small" type="text" data-bind="visible: cToVEdit, value: givenCtoV, hasfocus: cToVEdit" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="span3">
+						<img src="~/Content/images/VertexToVertex.gif" alt="Vertex to Vertex: The line segment that connects one point of the hexagon with its opposite point." data-bind="click: edit.bind($data, 'VtoV')" />
+						<div class="row-fluid">
+							<div class="offset4">
+								<div class="control-group">
+									<div class="control-label">V to V Length:</div>
+									<div class="controls">
+										<strong><span class="btn input-small" data-bind="visible: !vToVEdit(), text: calcVtoV, click: edit.bind($data, 'VtoV')"></span></strong>
+										<input class="input-small" type="text" data-bind="visible: vToVEdit, value: givenVtoV, hasfocus: vToVEdit" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
