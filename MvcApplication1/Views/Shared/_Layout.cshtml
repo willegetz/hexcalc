@@ -2,16 +2,22 @@
 <html>
 <head>
     <meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-	@Styles.Render("~/Content/bootstrap.min.css")
-	@Styles.Render("~/Content/bootstrap-responsive.min.css")
-	<script type="text/javascript" src="~/Scripts/knockout-2.2.1.js"></script>
-	<script type="text/javascript">
-		var HexCalcApp = {};
-	</script>
+    @Styles.Render("~/Content/bootstrap.min.css")
+    @Styles.Render("~/Content/bootstrap-responsive.min.css")
+    <script type="text/javascript" src="~/Scripts/knockout-2.2.1.js"></script>
+    <script type="text/javascript">
+        var HexCalcApp = {};
+    </script>
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Hexagon Calculator", "HexagonCalculator", "Home")</li>
+            <li>@Html.ActionLink("Inventory Tracker", "InventoryTracker", "Home")</li>
+        </ul>
+    </nav>
 </head>
 <body>
     @RenderBody()

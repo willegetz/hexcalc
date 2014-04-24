@@ -8,5 +8,10 @@ namespace MvcApplication1.Controllers
 		{
 			return View("HexagonCalculator");
 		}
+
+	    public ActionResult InventoryTracker()
+	    {
+		    return View("InventoryTracker");
+	    }
     }
 }

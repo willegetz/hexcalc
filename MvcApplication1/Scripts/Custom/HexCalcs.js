@@ -1,4 +1,6 @@
-﻿HexCalcApp.HexCalcViewModel = function (initialMeasure) {
+﻿HexCalcApp = {};
+
+HexCalcApp.HexCalcViewModel = function (initialMeasure) {
 	var self = this;
 
 	self.derivedSideLength = ko.observable(initialMeasure);
@@ -7,7 +9,7 @@
 	self.givenApothem = ko.observable();
 	self.calcApothem = ko.computed(function () {
 		if (self.currentCalcType() !== 'apothem') {
-			self.givenApothem(toFixed(((Math.sqrt(3) / 2) * self.derivedSideLength()), 4));
+		    self.givenApothem(toFixedValue(((Math.sqrt(3) / 2) * self.derivedSideLength()), 4));
 			return self.givenApothem();
 		} else {
 			return self.givenApothem();
@@ -17,7 +19,7 @@
 	self.givenPerimeter = ko.observable();
 	self.calcPerimeter = ko.computed(function () {
 		if (self.currentCalcType() !== 'perimeter') {
-			self.givenPerimeter(toFixed((self.derivedSideLength() * 6), 4));
+		    self.givenPerimeter(toFixedValue((self.derivedSideLength() * 6), 4));
 			return self.givenPerimeter();
 		} else {
 			return self.givenPerimeter();
@@ -27,7 +29,7 @@
 	self.givenArea = ko.observable();
 	self.calcArea = ko.computed(function () {
 		if (self.currentCalcType() !== 'area') {
-			self.givenArea(toFixed((((3 * Math.sqrt(3)) / 2) * Math.pow(self.derivedSideLength(), 2)), 4));
+		    self.givenArea(toFixedValue((((3 * Math.sqrt(3)) / 2) * Math.pow(self.derivedSideLength(), 2)), 4));
 			return self.givenArea();
 		} else {
 			return self.givenArea();
@@ -37,7 +39,7 @@
 	self.givenVtoV = ko.observable();
 	self.calcVtoV = ko.computed(function () {
 		if (self.currentCalcType() !== 'VtoV') {
-			self.givenVtoV(toFixed((2 * self.derivedSideLength()), 4));
+		    self.givenVtoV(toFixedValue((2 * self.derivedSideLength()), 4));
 			return self.givenVtoV();
 		} else {
 			return self.givenVtoV();
@@ -47,7 +49,7 @@
 	self.givenCtoV = ko.observable();
 	self.calcCtoV = ko.computed(function () {
 		if (self.currentCalcType() !== 'CtoV') {
-			self.givenCtoV(toFixed(self.derivedSideLength(), 4));
+		    self.givenCtoV(toFixedValue(self.derivedSideLength(), 4));
 			return self.givenCtoV();
 		} else {
 			return self.givenCtoV();
@@ -57,7 +59,7 @@
 	self.givenSide = ko.observable();
 	self.calcSide = ko.computed(function () {
 		if (self.currentCalcType() !== 'side') {
-			self.givenSide(toFixed(self.derivedSideLength(), 4));
+		    self.givenSide(toFixedValue(self.derivedSideLength(), 4));
 			return self.givenSide();
 		}else {
 			return self.givenSide();
@@ -67,7 +69,7 @@
 	self.givenFtoF = ko.observable();
 	self.calcFtoF = ko.computed(function () {
 		if (self.currentCalcType() !== 'FtoF') {
-			self.givenFtoF(toFixed((2 * ((Math.sqrt(3) / 2) * self.derivedSideLength())), 4));
+		    self.givenFtoF(toFixedValue((2 * ((Math.sqrt(3) / 2) * self.derivedSideLength())), 4));
 			return self.givenFtoF();
 		} else {
 			return self.givenFtoF();
@@ -158,17 +160,20 @@
 	});
 	
 	// From: http://stackoverflow.com/a/2909252
-	function toFixed(value, precision) {
-		var precision = precision || 0,
-		neg = value < 0,
-		power = Math.pow(10, precision),
-		value = Math.round(value * power),
-		integral = String((neg ? Math.ceil : Math.floor)(value / power)),
-		fraction = String((neg ? -value : value) % power),
-		padding = new Array(Math.max(precision - fraction.length, 0) + 1).join('0');
-
-		return precision ? integral + '.' + padding + fraction : integral;
+	function toFixedValue(value, precision) {
+	    return value.toFixed(precision);
 	}
+
+    self.fixedNumber = ko.observable();
+    self.fixNumber = ko.computed(function(value, precision) {
+        if (precision === undefined) {
+            precision = 0;
+        }
+        if (value !== undefined) {
+            self.fixedNumber(value.toFixed(precision));
+        }
+        return self.fixedNumber();
+    });
 };
 
 // From: http://stackoverflow.com/a/12356271
@@ -200,4 +205,6 @@
 	};
 }());
 
-ko.applyBindings(new HexCalcApp.HexCalcViewModel(0));
+$(document).ready(function() {
+    ko.applyBindings(new HexCalcApp.HexCalcViewModel(0));
+});
