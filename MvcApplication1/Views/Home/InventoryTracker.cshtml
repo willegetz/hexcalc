@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Inventory Tracker";
+}
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/Custom/InvenTrack.js"></script>
+}
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>Inventory Tracker</h1>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <span data-bind="text: totalWeight"></span>
+            <!-- Container of player items
+                Control to add items to containier
+                Controls can be duplicated by being drug ont  -->
+        </div>
+        <div class="span10">
+            <!-- Container for player
+                    Control to recieve items -->
+        </div>
+    </div>
+</div>
