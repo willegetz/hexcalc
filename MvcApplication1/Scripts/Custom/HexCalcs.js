@@ -143,13 +143,13 @@ HexCalcApp.HexCalcViewModel = function (initialMeasure) {
 	
 	self.givenCtoV.subscribe(function (entry) {
 		if (self.currentCalcType() === 'CtoV') {
-			self.derivedSideLength(entry);
+			self.derivedSideLength(parseFloat(entry));
 		}
 	});
 	
 	self.givenSide.subscribe(function (entry) {
 		if (self.currentCalcType() === 'side') {
-			self.derivedSideLength(entry);
+			self.derivedSideLength(parseFloat(entry));
 		}
 	});
 	
